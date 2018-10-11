@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { NgbdModalStacked, NgbdModal1Content, NgbdModal2Content } from './modal-basic/modal-basic.component';
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		NgbdModalStacked,
+		NgbdModal1Content,
+		NgbdModal2Content
 	],
 	imports: [
 		BrowserModule,
-		NgbTooltipModule
+		NgbModule
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+	entryComponents: [NgbdModal1Content, NgbdModal2Content]
 })
 export class AppModule { }
